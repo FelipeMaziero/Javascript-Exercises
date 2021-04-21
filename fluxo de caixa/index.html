@@ -1,0 +1,49 @@
+<script>
+
+  let cost = {
+    incomes: [2500, 3200, 250, 360.45],
+    expenses: [320.34, 128.45, 176.87, 1450.00, 5000.9999]
+  }
+
+  function sum(array) {
+    let total = 0;
+
+    for(let  value of array) {
+      total += value
+    }
+
+    return total
+  }
+
+  function calculate() {
+    const costIncomes = sum(cost.incomes)
+    const costExpenses = sum(cost.expenses)
+
+    const total = costIncomes - costExpenses
+
+    const ifTotal = total >= 0
+
+    let messageTotal = "negativo"
+
+    if (ifTotal) {
+      messageTotal = "positivo"
+    }
+    
+    console.log(`Seu saldo é ${messageTotal} com o valor de: ${total.toFixed(2)}`);
+  }
+
+  calculate()
+
+  
+
+
+  
+
+
+
+
+
+
+
+  
+</script>
